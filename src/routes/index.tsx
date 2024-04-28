@@ -1,9 +1,6 @@
 import { Title } from "@solidjs/meta";
-import { createAsync } from "@solidjs/router";
-import { api } from "~/lib/api";
 
 export default function Home() {
-  const hello = createAsync(() => api.example.hello.query("world"));
   return (
     <main class="min-h-dvh flex flex-col items-center justify-center gap-8">
       <Title>RFLT</Title>
