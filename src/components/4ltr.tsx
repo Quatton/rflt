@@ -31,7 +31,10 @@ export function FLTR() {
         </button>
         <div class="text-center text-pretty max-w-md space-y-2">
          {fourLetters() !== "RFLT" ? <>{
-          completion()
+          typeof completion() === "string"
+          ? <p>{completion()!.split("\n").map((line) => <>{line}<br /></>)
+          }</p>
+          : <p>Generating...</p>
         }</>
          : <><p>
             Random Four Letters Thing is a simple web app that generates random
